@@ -1,39 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, ">
-    <title>Document</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/a773b921f4.js" 
+    crossorigin="anonymous"></script>
+
+    <title>Banking Application</title>
 </head>
 <body>
-    <div id="gameContainer">
-        <h1>Tic Tac Toe</h1>
-        <div id="cellContainer">
-            <div cellIndex="0" class="cell"></div>
-            <div cellIndex="1" class="cell"></div>
-            <div cellIndex="2" class="cell"></div>
-            <div cellIndex="3" class="cell"></div>
-            <div cellIndex="4" class="cell"></div>
-            <div cellIndex="5" class="cell"></div>
-            <div cellIndex="6" class="cell"></div>
-            <div cellIndex="7" class="cell"></div>
-            <div cellIndex="8" class="cell"></div>
-        </div> 
-        <h2 id="statusText"></h2>
-        <button id="restartBtn">Restart</button>
-    </div>
-    <script src="index.js"></script>
+    
+
+    <div class="menu-container">
+        <div class="header-img">
+            <div class="overlay"></div>
+            <div class="balance">
+                <h2>Balance</h2>
+                <div>
+                    <i class="fas fa-money-bill-alt"></i>
+                    <p>$939.50</p>
+                </div>
+            </div>
+            <div class="selector-menu">
+                <a href="#"><i class="fas fa-university fa-1x" alt="Dashboard"></i></a>
+               <a href="#" class="current"
+                  ><i class="fas fa-paper-plane fa-1x" alt="Transfer"></i
+                ></a>
+               <a href="#"><i class="fa-solid fa-scroll fa-1x" alt="Statement"></i></a>
+               <a href="#"><i class="fa-solid fa-gear"alt="Settings"></i></a>
+               <a href="#"><i class="fa-solid fa-user"alt="Sign In"></i></a>
+              </div>
+        </div>
+        <ul class="list" class="scroll">
+            <li class="item">
+                <a href="#">Tuck: Ice Chai</a>
+                <p>$4.00</p>
+            </li>
+            <li class="item">
+               <a href="#">School Store: Hoodie</a> 
+               <p>$45.00</p>
+            </li>
+            <li class="item">
+                <a href="#">Tuck: Muffin</a>
+                <p>$3.00</p>
+            </li>
+            <li class="item">
+                <a href="#">Tuck: Bacon Egg & Cheese</a>
+                <p>$6.00</p>
+            </li>
+            <li class="item">
+                <a href="#">Tuck: Arizona</a>
+                <p>$2.50</p>
+            </li>v 
+            <li class="item">
+                <a href="#">Tuck: Arizona</a>
+                <p>$2.50</p>
+            </li>
+            <li class="item">
+                <a href="#">Tuck: Bacon Egg & Cheese</a>
+                <p>$6.00</p>
+            </li>
+            <li class="item">
+                <a href="#">Tuck: Bacon Egg & Cheese</a>
+                <p>$6.00</p>
+            </li>
+        </ul>
+    </div> 
 </body>
-
-
-
-
-
-
-
-
-
-</html>
+</html> 
