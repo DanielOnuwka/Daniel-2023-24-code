@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/a773b921f4.js" 
+    crossorigin="anonymous"></script>
+
+    <title>Account</title>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <meta name="google-signin-client_id" content="YOUR_CLIENT_ID.apps.googleusercontent.com">
+    <style>
+        .g-signin2 {
+            display: inline-block;
+            background-color: #7c7e81;
+            color: #fff;
+            border-radius: 4px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .g-signin2:hover {
+            background-color: #b507078f;
+        }
+    </style>
+</head>
+<body>
+    <div class="menu-container">
+        
+        <div class="header-img">            
+            <div class="overlay">
+                
+            <div class="selector-menu">
+            <a href="index.html"><i class="fas fa-university fa-2x" alt="Dashboard"></i></a>
+            <a href="transfer.html"><i class="fas fa-paper-plane fa-2x" alt="Transfer"></i></a>
+               <a href="statement.html"><i class="fa-solid fa-scroll fa-2x" alt="Statement"></i></a>
+               <a href="settings.html"><i class="fa-solid fa-gear fa-2x"alt="Settings"></i></a>
+               <a href="account.html"><i class="fa-solid fa-user fa-2x"alt="Sign In"></i></a>
+              </div>
+                <!-- Google Sign-In Button -->
+        <div class="g-signin2" data-onsuccess="onSignIn"></div>
+        <script>
+            function onSignIn(googleUser) {
+                var profile = googleUser.getBasicProfile();
+                console.log('ID: ' + profile.getId()); 
+                console.log('Name: ' + profile.getName());
+                console.log('Email: ' + profile.getEmail()); 
+            }
+        </script>
+            </div>
+            <div class="log-in">
+                <h2 style="margin-bottom: 40px; font-size: 80px; ">Log in</h2>
+                
+                </div>
+            </div>
+            
+        </div>
+</body>
+</html>
