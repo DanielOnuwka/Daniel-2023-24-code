@@ -1,3 +1,4 @@
+
 :root{
     background: rgb(191,2,18);
 background: radial-gradient(circle, rgba(191,2,18,1) 0%, rgba(186,208,235,1) 100%);
@@ -16,7 +17,7 @@ body{
     align-items: center;
     justify-content: center;
     height: 50%;
-    margin-top: 5%;
+    margin-top: 2%;
 }
 
 a{
@@ -82,8 +83,8 @@ i{
 }
 
 .menu-container{
-    width: 90%;
-    max-height: 700px;
+    width: 95%;
+    max-height: 900px;
     overflow-y: auto;
     border-top-right-radius: 10px;
     border-top-left-radius: 5px;
@@ -129,6 +130,8 @@ i{
 .list a, .list p{
     color:black;
     opacity: 1;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: x-large;
 }
 
 
@@ -215,7 +218,147 @@ i{
     padding: 5px;
 }
 
+:root {
+    --c-text-primary: #191919;
+    --c-text-secondary: #737374;
+    --c-border-primary: #ccc;
+    --c-bg-body: #ccc;
+    --c-bg-primary: #fff;
+    --c-bg-secondary: #d4d8dd;
+    --c-bg-button: #fff;
+}
 
+:root.dark-theme {
+    --c-text-primary: #eee;
+    --c-text-secondary: #d3d5db;
+    --c-border-primary: #454545;
+    --c-bg-body: #5e5e5e;
+    --c-bg-primary: #323339;
+    --c-bg-secondary: #222128;
+    --c-bg-button: #494a50;
+}
+
+:root.black-theme {
+    --c-text-primary: #edeeef;
+    --c-text-secondary: #d4d7e1;
+    --c-border-primary: #323232;
+    --c-bg-body: #000;
+    --c-bg-primary: #1b1d23;
+    --c-bg-seconday: #000001;
+    --c-bg-button: #343844;
+}
+body {
+    display: flex;
+    font-family: sans-serif;
+    line-height: 1.5;
+    justify-content: center;
+    background-color: var(--c-bg-body);
+    transform: background-color 1s ease;
+    color: var(--c-text-primary); 
+}
+.menu {
+    width: 90%;
+    margin-top: 80px;
+    max-width: 320px;
+    background-color: var(--c-bg-primary);
+    transition: background-color .30s ease;
+    border-radius: 15px;
+}
+
+/* menu-header */ 
+.menu-header {
+    padding: 1rem;
+}
+
+.menu-header-title {
+    font-size: 1.2rem;
+    color: var(--c-text-secondary);
+    font-weight: 700;
+}
+
+/* theme swithcer */
+.theme-switcher input {
+    display: none;
+}
+
+.theme-switcher {
+    position: relative;
+    background-color: var(--c-big-secondary);
+    border-radius: 10px;
+    display: flex;
+    padding: 0 3px;
+}
+
+.theme-switcher label {
+    position: relative;
+    z-index: 2;
+    width:calc(100% / 3);
+    color: var(--c-text-secondary);
+}
+
+.theme-switcher label span {
+    padding: 8px 0;
+    display: flex;
+    justify-content: center;
+    font-weight: 600;
+    opacity: .8;
+}
+
+.theme-switcher label span:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.theme-switcher .slider {
+    position: absolute;
+    z-index: 1;
+    width: calc(100% - 6px) / 3;
+    top: 3px;
+    bottom: 3px;
+    transform: translateX(-110);
+    border-radius: 8px;
+    transition: .30s ease, trasnform .25s ease-out;
+    background-color: var(--c-bg-button);
+}
+
+.theme-switcher input:nth-of-type(1):checked ~ .slider {
+    transform: translateX(0);
+}
+
+.theme-switcher input:nth-of-type(2):checked ~ .slider {
+    transform: translateX(100%);
+}
+
+.theme-switcher input:nth-of-type(3):checked ~ .slider {
+    transform: translateX(200%);
+}
+
+/* Menu body */
+.menu-body {
+    padding: 1rem;
+    border-top: 1px solid var(--c-border-primary);
+    transition: border-color .30s ease;
+}
+
+.menu-body a {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    padding: .6rem .5rem;
+    border-radius: 4px;
+    font-weight: 500;
+    transition: .30s ease;
+}
+
+.menu-body a:hover {
+    background-color: var(--c-bg-secondary);
+}
+
+ion-icon {
+    margin-right: 5px;
+    font-size: 20px;
+    margin: 2px;
+}
 .log-in {
     color:#fff;
     position: absolute;
@@ -263,4 +406,3 @@ i{
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
 }
-
